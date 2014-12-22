@@ -4,6 +4,7 @@ Given some time, you should find some documentation and hints here.
 ## Instructions
 * [[Installation]] (including requirements and download)
 * [[Configuration]]
+* [[Usage]]
 
 ## Example output
 To give you an idea of what to expect, here are some anonymized examples of device documentation *Adebar* created:
