@@ -86,3 +86,44 @@ are for you to run, after an optional modification:
   better check and make sure the script only holds what you need.
 * `doc/*`: the files here are for reference, so you can read them :)
 * `conf/*`: again, for reference and study.
+
+
+## What format are the generated files in the `doc/` sub-directory using?
+Not a question for those used to *Github*, who probably recognize the `.md`
+suffix. This suffix stands for [Markdown], a plain text formatting syntax to
+produce well-formatted documents, while still being easy enough to read without
+being converted first.
+
+There are different „flavors“ of [Markdown] around. Some of the most common ones
+include:
+
+* [Standard Markdown][1], which all flavors are based upon (and which *Adebar*
+  sticks to when creating the files in the `doc/` sub-directories)
+* [Github flavored Markdown][2] as being used at, hrm, Github
+* [Stack Exchange's Markdown][3]
+* [Markdown Extra][4]
+* and several more
+
+So apart from copying the generated `.md` files to a *Github Gist*, what
+alternatives are there to view them in their „formatted way“?
+
+* [ReText][5] is an easy to use editor and viewer for [Markdown], and even
+  understands several flavors. It can be extended with plugins, and is
+  available for Linux (officially) and Mac.
+* [ownCloud][6] has an integrated [Markdown] viewer and editor
+* for Windows, there's [MarkdownPad][7] with a look-and-feel quite similar
+  to [ReText][5].
+* For *Firefox* users, there's the [Markdown Viewer][8] addon
+* More alternatives can be found in an article titled
+  [78 Tools for Writing and Previewing Markdown][9]
+
+[Markdown]: http://en.wikipedia.org/wiki/Markdown "Wikipedia: Markdown"
+[1]: http://daringfireball.net/projects/markdown/
+[2]: http://github.github.com/github-flavored-markdown/
+[3]: http://stackoverflow.com/editing-help
+[4]: http://en.wikipedia.org/wiki/Markdown_Extra "Wikipedia: Markdown Extra"
+[5]: https://sourceforge.net/projects/retext/
+[6]: http://owncloud.org/
+[7]: http://markdownpad.com/
+[8]: https://addons.mozilla.org/de/firefox/addon/markdown-viewer/
+[9]: http://mashable.com/2013/06/24/markdown-tools/
