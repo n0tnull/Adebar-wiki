@@ -1,3 +1,10 @@
+## What needs to be configured?
+In principle: nothing. *Adebar* should run fine out-of-the-box, as it comes with
+a decent „default configuration“ coded into the main script itself. So if you
+first just want to give it a look, you can skip this section and start *Adebar*
+straight away. Come back here if you feel the need to fine-tune things.
+
+
 ## Where does *Adebar* check for configuration files?
 When running, *Adebar* first sets up „default values“, and then checks for an existing config file:
 
@@ -153,3 +160,30 @@ even holds two of them. If you do so, it is recommended to have their
 names always starting with `uf_` (for „user function“). This makes sure
 they won't collide with any functions defined in `adebar-cli` itself –
 whether functions already available there, or added in the future.
+
+
+## App names
+If you ran *Adebar* out-of-the-box, you will notice that even in
+[[userApps.md|example userApps.md]], apps are only referenced by their
+corresponding package name (e.g. `com.keramidas.TitaniumBackup`). So you will
+certainly miss the name you remember the app by (for the given example:
+„Titanium Backup“). The reason is quite simple: There is no generic way to
+retrieve the names of apps – be it from the device itself, or any other source.
+ADB does offer no such feature.
+
+But still, there are ways: to have your `userApps.md` reveal the names for
+packages, you can manually create the corresponding cache files:
+
+1. Create a cache directory and inside that, an additional directory
+   `appnames`
+1. Inside the `appnames` directory, for each app create a corresponding
+   file with the name of the package, e.g. `appnames/com.foobar.app`,
+   which holds nothing but the app name (e.g. "Foobar App")
+1. edit your config, and point the `CACHEDIR` to the cache directory. You can
+   use an absolute path (e.g. `/home/me/adebar-cache`), or a relative one (e.g.
+   `cache`); in the latter case, this is interpreted as relative to the path
+   you're in when running *Adebar* (usually the one `adebar-cli` resides in).
+
+Now *Adebar* will automatically check for each app whether its name is known
+here, and use it accordingly.
+
