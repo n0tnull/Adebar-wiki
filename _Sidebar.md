@@ -9,3 +9,4 @@
 * Other information
     * [[Known Issues]]
     * [[adebar-gui]]
+    * [[Hints]]
