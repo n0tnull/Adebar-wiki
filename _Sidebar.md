@@ -8,3 +8,4 @@
     * [userApps.md](https://github.com/IzzySoft/Adebar/wiki/example-userApps.md)
 * Other information
     * [[Known Issues]]
+    * [[adebar-gui]]
