@@ -152,6 +152,15 @@ details. Apps are grouped by installers in [[userApps.md|example userApps.md]].
 * `APPNAME_CMD`: Similar to `POSTRUN_CMD` a command to retrieve app names.
   Must return a string only (the app name or, if it fails to retrieve it,
   the package name as passed to it). Only parameter is the package name.
+* `ROOT_COMPAT`: Root compatibility mode. By default turned off (`=0`).
+  Turn this on (`=1`) when your device is rooted, but the ADB daemon (`adbd`)
+  is not running in root mode (i.e. your corresponding device property is
+  set to `ro.secure=1` – which you can check with `adb shell getprop ro.secure`;
+  note that some devices seem to "lie" here, so the final test would be
+  `adb shell ps adb`, which should report whether adbd is run by root). When
+  in compatibility mode, some "secured config files" are not simply "pulled"
+  (which would remain their timestamps), but "cat" – as that can be done via
+  `adb shell` using the `su -c` command.
 
 ## User-defined Functions
 As described for the `POSTRUN_CMD` and `APPNAME_CMD` above, you can use
