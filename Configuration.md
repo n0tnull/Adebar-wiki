@@ -37,6 +37,7 @@ A short information for each setting is contained in the example config file, wh
 * `USERDIR`: sub-directory where the backup scripts will place the ADB backups
   of your user-apps into (relative to where they're run). Default is "userApps".
 * `SYSDIR`: Similar, for the data backups of your system apps. Defaults to "sysApps".
+* `PARTBACKUPDIR`: again similar, for partition images
 * `DOCDIR`: Where to place created documentary files. Default is "docs", which results
   in `${STORAGE_PATH}/${OUTDIR}/docs`
 * `CONFDIR`: Similar for pulled config files (`conf/`). Default is "conf", which has
@@ -88,6 +89,21 @@ and `1` stands for „on”. By default, all features are enabled (i.e. set to `
 * `MK_INSTALLLOC`: Deal with the default-install-location (where apps should
   be installed by default: 0=auto (system decides), 1=device, 2=sdcard).
   Creates a 1-liner script to set that again.
+* `MK_PARTBACKUP`: Create a script to backup storage partitions (raw backup
+  images). Turned OFF by default.
+    * `PARTITION_SRC`: Where to obtain the partition details from. Reliability
+      of sources differs between manufacturers, devices, ROMs, and possible
+      other modifications. If this is set to "auto", *Adebar* tries to figure
+      the best source itself. It currently considers `/proc/mtd`, `/proc/emmc`,
+      `/dev/block/platform/*/by-name`, `/proc/partitions`, and `/proc/mounts`.
+      Moreover, found details are sometimes combined from different sources.
+      If for your device, *Adebar* seems to use the wrong source, or you want
+      to "speed up" things a little, you can define the source to be used with
+      this setting. Available options are currently: auto|mtd|emmc|byname|parts.
+      Most reliable details seem to be available on MediaTek devices, but I
+      have none at my disposal to check. You might get a „green hint“ if that
+      source was detected. If that happens, please get in contact with me, so I
+      can improve *Adebar* with your help.
 * `MK_DEVICEINFO`: Create a (Markdown) document containing device information.
   For an example, see the [[example deviceInfo.md]].
     * `MK_DEVICEINFO_SENSORS`: Sensor details are part of device-info; if you
@@ -98,6 +114,7 @@ and `1` stands for „on”. By default, all features are enabled (i.e. set to `
       might decide it's not useful to you (as it looks a bit cryptic). So I
       decided to give you the change to switch it off :)
     * `MK_DEVICEINFO_STATUS`: Device status details, such as battery status
+    * `MK_PARTINFO`: Include details on storage partitions
 
 ### UserApp specifics
 When an app is installed, Android records the „installer“ together with other

@@ -70,3 +70,31 @@ inside – and of course the backups reside on one of the two.
 Disadvantage here is that *TiBu* touches the timestamps of all files, so the
 original timestamps are lost: All files appear as if they would have been created
 at the time the backup was made.
+
+
+## Partition Backup
+Version 1.1.0 of *Adebar* added the functionality to create a script for
+backing up your partitions block-wise, i.e. create partition images. Consider
+this rather experimental: This script is a side-product of the partition info
+in the device documentation. Such images can get rather big, and running the
+script as-is might result in unnecessary "duplicates" (to give you an example:
+If might backup `/dev/block/mmcblk1`, which basically is the entire „drive“,
+and additionally all its partitions separately: `/dev//dev/block/mmcblk1p*`).
+This is because there's no unified way of retrieving partition details. Other
+than with „normal Linux systems“, Android installations don't come with
+`/etc/fstab` by default (though you might find such with your custom ROM or
+*Busybox* installation). So *Adebar* collects all details, and lets you decide.
+
+Which also is the reason this generated script is not made executable (so you
+don't run it accidentally before having it investigated and adjusted to your
+needs).
+
+The generated images could, similar to a *Nandroid* backup, be used to restore
+the device. But be very careful with this approach: Never ever try writing a
+partition which is in use (e.g. do not replace `/system` while your device is
+running in „normal operation mode“). Make sure you know what you are doing
+*before* you start doing it, or you might end up with a broken device.
+
+Which is why I won't give instructions on how to restore those images. If you're
+knowing what you're doing, you also know how to do it. I take no responsibility
+for any results (but if they're positive, I'm open to donations).
