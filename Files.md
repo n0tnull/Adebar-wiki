@@ -51,7 +51,8 @@ Note that not all of those files are generated in all cases. Some depend on cond
 * `packages.xml` of course can only be there if *Adebar* was able to pull it.
   Starting with Android 4.1, this requires the ADB daemon to run in root mode.
 * `tibu` is only generated when the variable `DEVICE_IP` was set to an IP/hostname
-  in the config (by default, it's not/empty), and `MK_TIBU` was set to `1` (default).
+  in the config (by default, it's not/empty), and `MK_TIBU` was set to `1`
+  (default is `0`).
 * `wpa_supplicant.conf` can only be pulled if the ADB daemon on the device is
   running in root-mode
 * some other config files might be „protected“ from being pulled in the same way
