@@ -82,10 +82,11 @@ and `1` stands for „on”. By default, all features are enabled (i.e. set to `
 * `MK_TIBU`: create the script to pull stuff from the TiBu web server.
   Even if set to `1`, this will be disabled if you didn't set a `DEVICE_IP`
   (see above in „Settings for Titanium Backup“).
-* `MK_PKG_DATA`: pull `packages.xml` (if possible) and also create files
-  with package details: Creates the *script* to deal with "disabled components",
+* `MK_USERAPPS`: Creates the *script* to deal with "disabled components",
   plus the markup document holding details on installed apps and their sources
   ([[userApps.md|example userApps.md]]).
+* `MK_SYSAPPS`: similarly for system apps. This is disabled by default, as it
+  takes quite a while.
 * `MK_INSTALLLOC`: Deal with the default-install-location (where apps should
   be installed by default: 0=auto (system decides), 1=device, 2=sdcard).
   Creates a 1-liner script to set that again.
