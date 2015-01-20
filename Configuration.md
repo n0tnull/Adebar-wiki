@@ -84,9 +84,14 @@ and `1` stands for „on”. By default, all features are enabled (i.e. set to `
   (see above in „Settings for Titanium Backup“).
 * `MK_USERAPPS`: Creates the *script* to deal with "disabled components",
   plus the markup document holding details on installed apps and their sources
-  ([[userApps.md|example userApps.md]]).
-* `MK_SYSAPPS`: similarly for system apps. This is disabled by default, as it
-  takes quite a while.
+  ([[userApps.md|example userApps.md]]). Enabled by default.
+* `MK_SYSAPPS`: similarly for system apps. Enabled by default.
+' `MK_SYSAPPS_RETRIEVE_NAMES`: Whether we should try to retrieve app names for
+  system apps as well (if the corresponding user function was defined by
+  `APPNAME_CMD`). This is disabled by default, as it slows down the process
+  of creating the `sysApps.md` file tremendously, and most app names are not
+  found anyway. You may use this once initially, but then it's recommended to
+  switch it off again.
 * `MK_INSTALLLOC`: Deal with the default-install-location (where apps should
   be installed by default: 0=auto (system decides), 1=device, 2=sdcard).
   Creates a 1-liner script to set that again.
