@@ -91,7 +91,9 @@ and `1` stands for „on”. By default, all features are enabled (i.e. set to `
   `APPNAME_CMD`). This is disabled by default, as it slows down the process
   of creating the `sysApps.md` file tremendously, and most app names are not
   found anyway. You may use this once initially, but then it's recommended to
-  switch it off again.
+  switch it off again.  
+  Some „pre-configured files“ for system apps can be found in the [Download area
+  at IzzyOnDroid](http://android.izzysoft.de/downloads).
 * `MK_INSTALLLOC`: Deal with the default-install-location (where apps should
   be installed by default: 0=auto (system decides), 1=device, 2=sdcard).
   Creates a 1-liner script to set that again.
