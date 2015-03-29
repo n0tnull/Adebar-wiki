@@ -45,6 +45,16 @@ A short information for each setting is contained in the example config file, wh
 * `CACHEDIR`: In the cache directory, Adebar stores data between runs –
   so it does not have to re-evaluate them. This includes e.g. names of apps
   in the `appnames` sub-directory. Leave it empty (default) to disable caching.
+* `TRANSFER_DIR`: base dir for transfers (install, push files, etc.). Completely
+  ignored if not set in your config (default), if the directory pointed to does
+  not exist, and skipped for the subdirs not existing as well. *Adebar* checks
+  for the following directories below this:
+    * `install`: first-time install of apps. Simply drop your `.apk` files here.
+      `.apk` files are kept if installation failed, but are deleted after a
+      successful install.
+    * `reinstall`: same, for updates to apps already installed. If you get the
+      error `INSTALL_FAILED_ALREADY_EXISTS` with the `install` dir, move that
+      `.apk` here.
 
 ### Device specifics
 * `DEVICE_NAME`: A name you can recognize your device by. This is used
