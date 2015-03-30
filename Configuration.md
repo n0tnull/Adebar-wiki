@@ -55,6 +55,12 @@ A short information for each setting is contained in the example config file, wh
     * `reinstall`: same, for updates to apps already installed. If you get the
       error `INSTALL_FAILED_ALREADY_EXISTS` with the `install` dir, move that
       `.apk` here.
+    * `upload`: stuff to be pushed to the device. Setup the same directory
+      structure here as it is on the device; if you e.g. wish to push `example.epub`
+      to `/sdcard/Books/example.epub`, you'll have to place it into
+      `${TRANSFER_DIR}/upload/sdcard/Books/example.epub`. If the transfer
+      succeeded, the entire tree (starting with `sdcard`) will be removed; on
+      failure it will remain.
 
 ### Device specifics
 * `DEVICE_NAME`: A name you can recognize your device by. This is used
