@@ -24,6 +24,9 @@ For easier handling, you could do the following:
   * `./adebar-cli moto` to create the scripts in `$STORAGE_BASE/moto`
   * `./adebar-cli htc _20141101` to create them in `$STORAGE_BASE/htc_20141101`
 
+Calling `adebar-cli` without specifying a parameter will cause it to tell you
+its syntax – and list available configuration files you have created in the
+`config/` directory.
 
 ## Exit codes
 * 1: Syntax error (missing or wrong arguments when calling the script)
