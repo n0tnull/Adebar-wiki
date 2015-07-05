@@ -22,6 +22,10 @@ Apps which I found having this issue include the following:
     - MobilityMap
     - WakeLockDetector
 
+If your device is rooted, you can work around this using [Xposed](http://repo.xposed.info/module/de.robv.android.xposed.installer)
+with the [Backup All Apps](http://repo.xposed.info/module/com.pyler.backupallapps)
+module, which I tested successfully.
+
 
 ## Backup of each app has to be confirmed separately
 Yes. That's a security measure so no stranger could simply connect an USB cable
