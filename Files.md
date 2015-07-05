@@ -45,6 +45,7 @@
     * `hosts`
     * `packages.xml`
     * `wpa_supplicant.conf`: contains all your WiFi APs, their passwords, etc.
+    * `softap.conf`: contains your WiFi hotspot SSID and password hash
 
 Note that not all of those files are generated in all cases. Some depend on conditions:
 
