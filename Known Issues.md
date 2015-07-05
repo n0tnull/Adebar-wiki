@@ -41,8 +41,10 @@ On some devices (all 4.1+ devices with the ADB daemon running in non-root mode?)
 
 This applies to some other files as well, especially those with sensitive details
 (e.g. `wpa_supplicant.conf`). If you want to pull them, you'll have to root your
-device and make sure the ADB daemon runs in root-mode (which can e.g. be achieved
-using chainfire's [adbd Insecure](http://play.google.com/store/apps/details?id=eu.chainfire.adbd)).
+device (a must) and make sure either the ADB daemon runs in root-mode (which can
+e.g. be achieved using chainfire's [adbd Insecure](http://play.google.com/store/apps/details?id=eu.chainfire.adbd))
+or you've set `ROOT_COMPAT=1` in your config.
+
 
 
 ## `disable` script not working?
