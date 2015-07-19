@@ -6,7 +6,7 @@
   `STORAGE_BASE`)
 
 You can pass it an optional second parameter, which will then be appended to the
-output directory name. This might especially useful if you want to keep scripts
+output directory name. This might be especially useful if you want to keep scripts
 from a specific run, and not have them overwriting your „default set“.
 
 (Note that for *always* keeping „historical sets“, there's an easier way: see the
