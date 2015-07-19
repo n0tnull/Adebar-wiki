@@ -24,7 +24,9 @@ Apps which I found having this issue include the following:
 
 If your device is rooted, you can work around this using [Xposed](http://repo.xposed.info/module/de.robv.android.xposed.installer)
 with the [Backup All Apps](http://repo.xposed.info/module/com.pyler.backupallapps)
-module, which I tested successfully.
+module, which I tested successfully. The [XInstaller](http://repo.xposed.info/module/com.pyler.xinstaller)
+module also contains a corresponding switch, and thus might work as well (not
+tested by me).
 
 
 ## Backup of each app has to be confirmed separately
