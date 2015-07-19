@@ -63,7 +63,9 @@ with their package names (e.g. `eu.chainfire.adbd` for chainfire's *adbd Insecur
 I wish there were means to list the „human readable app name“ along – but apart
 from pulling the entire `.apk` file and dissecting it via `aapt`, or trying to
 look up the package in the app stores' web pages, I know of no simple way to get
-hold on it.
+hold on it (if your device has `aapt` installed, as some CyanogenMod based ROMs
+with Android 4.4+ seem to have it, that's used by *Adebar* automatically; if not,
+you can install it manually [from here][1] if your device is rooted).
 
 To work around that, you can manually create the corresponding cache files, as
 described in [[Configuration]]. For apps available at *Google Play*, you can
@@ -73,3 +75,5 @@ This will, whenever an app name was not found in the cache, retrieve it from the
 HTML TITLE attribute of the app's *Playstore* web page.
 
 Alternative suggestions welcome.
+
+[1]: http://android.izzysoft.de/downloads "IzzyOnDroid: Android Downloads"

@@ -109,7 +109,7 @@ and `1` stands for „on”. By default, all features are enabled (i.e. set to `
   found anyway. You may use this once initially, but then it's recommended to
   switch it off again.  
   Some „pre-configured files“ for system apps can be found in the [Download area
-  at IzzyOnDroid](http://android.izzysoft.de/downloads).
+  at IzzyOnDroid][1].
 * `MK_INSTALLLOC`: Deal with the default-install-location (where apps should
   be installed by default: 0=auto (system decides), 1=device, 2=sdcard).
   Creates a 1-liner script to set that again.
@@ -237,3 +237,13 @@ packages, you can manually create the corresponding cache files:
 Now *Adebar* will automatically check for each app whether its name is known
 here, and use it accordingly.
 
+Alternatively, if the `aapt` binary is found on your device in `/system/bin`,
+*Adebar* will automatically use that to retrieve the app names from their
+resp. packages on-device (and feed the cache, if configured, so your other
+devices profit from it). However, to my knowledge this is only the case for
+ROMs from Kitkat (Android 4.4) upwards that are based on CyanogenMod. If your
+device does not fall into that category, but is rooted, you can [find the
+binary here][1] together with instructions on how to install it on your rooted
+device.
+
+[1]: http://android.izzysoft.de/downloads "IzzyOnDroid: Android Downloads"
