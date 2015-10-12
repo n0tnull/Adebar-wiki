@@ -28,6 +28,7 @@
       e.g. after a factory-reset
     * `defaultInstallLoc`: 1-liner to set the default-install-location for apps
     * `disable`: shell script utilizing ADB to disable packages
+    * `partBackup`: script to backup all the partitions of your device
     * `sysbackup`: script to backup all data of your system apps, including shared
       storage (data from the SD cards)
     * `sysrestore`: script to restore the entire system data backed up with `sysbackup`
