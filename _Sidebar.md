@@ -10,3 +10,4 @@
     * [[Known Issues]]
     * [[adebar-gui]]
     * [[Hints]]
+    * [[Tested Devices]]
