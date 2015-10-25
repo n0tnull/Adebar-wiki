@@ -93,6 +93,20 @@ and `1` stands for „on”. By default, all features are enabled (i.e. set to `
 * `MK_APPDISABLE`: the script to „freeze/disable“ apps
 * `MK_USERBACKUP`/`MK_SYSBACKUP`: create the script to backup user apps+data /
   system app-data
+* `MK_APPRESTORE_DELAY`: on restore, ADB sometimes simply „aborts“ when a second
+  restore command comes in while it's still processing the first – so subsequent
+  commands get lost (waiting for the user to accept them on the device which
+  doesn't prompt for it). Hence you can configure how to deal with that (you can
+  play with the values to find what fits you best):
+    * `p` will prompt you on the computer when to send the next command
+    * `0` will simply „hammer them in“ expecting the device to cope with it
+    * an integer value larger than `0` will pause for that amount of seconds
+      before sending the next `adb restore` command.
+* `MK_XPRIVACY_EXPORT`: whether to trigger a data export of XPrivacy. Disabled (`0`)
+  by default, so Adebar doesn't have to check for its presence unnecessarily.
+  Set to `1` to enable it.
+* `MK_XPRIVACY_PULL`: whether to pull XPrivacy's databases. Disabled (`0`) by
+  default as it requires root; set to `1` to enable it.
 * `PULL_SETTINGS`: pull settings/configs from the device (currently just
   `wpa_supplicant.conf`, but there might be more in the future)
 * `MK_TIBU`: create the script to pull stuff from the TiBu web server.
