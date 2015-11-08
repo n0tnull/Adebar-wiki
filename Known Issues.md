@@ -31,9 +31,14 @@ tested by me).
 
 ## Backup of each app has to be confirmed separately
 Yes. That's a security measure so no stranger could simply connect an USB cable
-to your device and steal your data. I didn't yet check whether it's possible to
-at least temporarily disable that. If I do and find a way, you will find it with
-the other hints :)
+to your device and steal your data. But there's a way to work around this
+restriction using „key events“. If you want to go this way, add
+`AUTO_CONFIRM=1` to your configuration file.
+
+## Backup passwords containing spaces causing issues
+Yes they will. For details, please see [this pull request](https://github.com/IzzySoft/Adebar/pull/12).
+As working around that issue is tricky at best, it's rather recommended to not
+use spaces in passwords at all.
 
 
 ## `packages.xml` (and/or other files) not retrievable
