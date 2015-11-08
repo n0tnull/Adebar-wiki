@@ -31,9 +31,7 @@ tested by me).
 
 ## Backup of each app has to be confirmed separately
 Yes. That's a security measure so no stranger could simply connect an USB cable
-to your device and steal your data. I didn't yet check whether it's possible to
-at least temporarily disable that. If I do and find a way, you will find it with
-the other hints :)
+to your device and steal your data. Adebar has the option ``AUTO_CONFIRM`` that solves this issue. 
 
 
 ## `packages.xml` (and/or other files) not retrievable
