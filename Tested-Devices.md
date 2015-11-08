@@ -15,7 +15,7 @@ LG Optimus 4X HD (P880) |       4.1.2 | 2015-10 | stock ROM (Izzy)
 Motorola Milestone 2    |       4.2.x |         | CyanogenMod (Izzy)
 Motorola Milestone 2    |       4.3.x | 2015-10 | CyanogenMod (Izzy)
 Samsung Galaxy Ace 2    |       4.1.2 | 2015-10 | stock, not rooted (Izzy)
-Oneplus A0001 (A0001)   |       5.1.1 | 2015-11  | Cyanogenmod (bacon, ``YOG4PAO33I``
+Oneplus (A0001)         |       5.1.1 | 2015-11  | Cyanogenmod (bacon, ``YOG4PAO33I``
 
 ### Tablets
 Device                  | Android<br>version | Date    | Comment
