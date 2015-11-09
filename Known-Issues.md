@@ -33,7 +33,10 @@ tested by me).
 Yes. That's a security measure so no stranger could simply connect an USB cable
 to your device and steal your data. But there's a way to work around this
 restriction using „key events“. If you want to go this way, add
-`AUTO_CONFIRM=1` to your configuration file.
+`AUTO_CONFIRM=1` to your configuration file. Note you will still have to
+unlock your device; the „key events“ won't register while the lock screen is
+active.
+
 
 ## Backup passwords containing spaces causing issues
 Yes they will. For details, please see [this pull request](https://github.com/IzzySoft/Adebar/pull/12).
