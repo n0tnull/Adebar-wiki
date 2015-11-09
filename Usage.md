@@ -51,10 +51,11 @@ There are multiple backup scripts generated:
   Check the script, comment out what you don't want to be backed up („shared
   storage“, i.e. your SD cards, is already wrapped asking you at runtime
   whether you want to run that or not). Once you're done, make sure your device
-  is connected, then start the script. Approve each backup call on the device
-  (from the second call onwards, only do so after the previous call is finished,
-  or ADB might choke). When the script is finished, you will find your `.ab`
-  backup files in the corresponding directories.
+  is connected (and the screen unlocked), then start the script. Approve each
+  backup call on the device (unless you're using `AUTO_CONFIRM=1`; from the
+  second call onwards, only do so after the previous call is finished, or ADB
+  might choke). When the script is finished, you will find your `.ab` backup
+  files in the corresponding directories.
 * `partBackup`: this scipt creates images of all your device's partitions.
   As with the ADB backups, check the script and see if you need them all;
   I've tried my best to give the images „speaking names“ – but the reality will
