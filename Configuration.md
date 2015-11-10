@@ -216,6 +216,19 @@ details. Apps are grouped by installers in [[userApps.md|example userApps.md]].
   in compatibility mode, some "secured config files" are not simply "pulled"
   (which would remain their timestamps), but "cat" – as that can be done via
   `adb shell` using the `su -c` command.
+* `AUTO_CONFIRM`: Whether backups should be automatically confirmed via
+  keypresses send with ADB. When using this, don't touch your device while
+  the „automated process“ is running: it requires the backup/restore screen
+  being in the foreground – or it will hit any other button in reach instead.
+  No guarantees, the risk is yours; which is why this is disabled by default.
+  Set to `1` if you want to play with it.
+* `AUTO_UNLOCK`: Shall the backup/restore scripts try to automatically
+  unlock your screen? Note that this a) doesn't work on all devices, b)
+  on some devices might require the screen already being turned on, and
+  c) definitely doesn't work if a password/pattern/pin protection is active.
+  Hence by default this is turned off. Feel free to play with it: in the
+  worst case, it simply doesn't work.
+
 
 ## User-defined Functions
 As described for the `POSTRUN_CMD` and `APPNAME_CMD` above, you can use
