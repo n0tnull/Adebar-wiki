@@ -9,6 +9,8 @@ below from its original report.
 ### Smartphones
 Device                  | Android<br>version | Date    | Comment
 ----------------------- | --------------: | ------- | ---------------------
+Galaxy Note 2 (GT-N7100)|       4.4.2 | 2015-12 | stock ROM, Windows/Cygwin (Irfy)
+Huawei Nexus 6P (angler)|       6.0.x | 2015-12 | stock, rooted, Windows/Cygwin (Irfy)
 Lenovo A536             |       4.4.2 | 2015-10 | stock ROM, MTK (tukusejssirs)
 LG Optimus 4X HD (P880) |       4.0.3 |         | stock ROM (Izzy)
 LG Optimus 4X HD (P880) |       4.1.2 | 2015-10 | stock ROM (Izzy)
