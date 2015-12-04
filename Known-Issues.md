@@ -1,4 +1,4 @@
-## Some apps simply don't want to be backed up via ADB
+## Some apps simply don't want to be backed up via ADB (41 byte files)
 In my tests I've encountered several apps which seem to simply refuse being
 backed up via ADB. In those cases, backups result in a 41 byte file (which is
 just the backup file header). So watch out for those, and see to have them
@@ -27,6 +27,22 @@ with the [Backup All Apps](http://repo.xposed.info/module/com.pyler.backupallapp
 module, which I tested successfully. The [XInstaller](http://repo.xposed.info/module/com.pyler.xinstaller)
 module also contains a corresponding switch, and thus might work as well (not
 tested by me).
+
+
+## ADB Backup not working for *any* app (0/41 byte files)
+Again no issue of *Adebar* – but an incompatibility on the ADB backend: the
+version running on the device doesn't want to play with the version running
+on your PC.
+
+In the best case, simply updating the ADB binaries on your computer should solve
+this – but there are cases reported where one must *downgrade* instead (see
+[issue #7](https://github.com/IzzySoft/Adebar/issues/7#issuecomment-161903472) and,
+in more detail, [Android.SE](http://android.stackexchange.com/q/83080/16575)).
+
+If you're in the trouble having multiple devices and each requires its own ADB
+version (rare case), a work-around (so each one gets its correct `adb` binary)
+is to add a line to the corresponding config file: `alias adb='/path/to/adb'`,
+to point to the corresponding binary for each device.
 
 
 ## Backup of each app has to be confirmed separately
