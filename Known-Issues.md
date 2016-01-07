@@ -128,6 +128,9 @@ Examples of possibilities are:
   [How can I run a script on boot?](http://android.stackexchange.com/q/6558/16575)
   and [How to run a script on boot](http://android.stackexchange.com/a/115595/16575)
   (the latter is about how to add `init.d` support to your device if it's not there)
+* according to [this SO post](http://stackoverflow.com/a/29389115/2533433) it might
+  work to simply issue a `setprop persist.usb.serialno MyUniqueSerial` as root,
+  and then reboot the device.
 * run a script at boot time by other means, e.g. utilizing [Script
   Manager](https://play.google.com/store/apps/details?id=os.tools.scriptmanager)
   or [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)
