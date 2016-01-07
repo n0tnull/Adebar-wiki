@@ -102,6 +102,8 @@ and `1` stands for „on”. By default, all features are enabled (i.e. set to `
     * `0` will simply „hammer them in“ expecting the device to cope with it
     * an integer value larger than `0` will pause for that amount of seconds
       before sending the next `adb restore` command.
+* `MK_AUTOCONFIRM_DELAY`: Similarly, if using `AUTO_CONFIRM`, you can specify a
+  delay in seconds to give the device time to act. Default is 3.
 * `MK_XPRIVACY_EXPORT`: whether to trigger a data export of XPrivacy. Disabled (`0`)
   by default, so Adebar doesn't have to check for its presence unnecessarily.
   Set to `1` to enable it.
