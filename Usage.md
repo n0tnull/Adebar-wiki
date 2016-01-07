@@ -28,6 +28,17 @@ Calling `adebar-cli` without specifying a parameter will cause it to tell you
 its syntax – and list available configuration files you have created in the
 `config/` directory.
 
+There are two exceptions to the above mentioned syntax:
+
+* `-h` or `--help` as first parameter will show the syntax
+* `-a` or `--auto` will try to automatically match connected device(s) with
+  corresponding config files. For this to work, each device must have its
+  own config file in place with the corresponding serial configured (no
+  trailing comments on that line). Beware if you have multiple devices using
+  the same serial (often `0123456789ABCDEF`): it's always the first matching
+  config that will be used!
+
+
 ## Exit codes
 * 1: Syntax error (missing or wrong arguments when calling the script)
 * 2: No device found
