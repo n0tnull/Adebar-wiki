@@ -100,4 +100,37 @@ HTML TITLE attribute of the app's *Playstore* web page.
 
 Alternative suggestions welcome.
 
+
+## Difficulties dealing with multiple devices having the same serial
+This mostly goes with custom ROMs or with „cheap devices“, and is nothing to
+blame upon *Adebar:* I've encountered multiple devices/ROMs from different
+vendors using the serial `0123456789ABCDEF`, which is obviously some „dummy“.
+Not a big deal if you call the *Adebar* script with the right config for the
+connected device – but it might become tricky if you want to make use of the
+`--auto` feature, where *Adebar* checks for connected devices using the `adb
+devices` command, and tries to figure the correct config file by the serials
+reported.
+
+Nothing we can do about that on the end of *Adebar* – but if your device is
+rooted, you may be able to fix its serial yourself: The serial is usually taken
+from `/sys/class/android_usb/android0/iSerial`. If you can manage to have a
+unique value written there automatically at boot, that would fix it.
+
+    echo -n MyUniqueSerial > /sys/class/android_usb/android0/iSerial
+
+would do the job – you just need to find out how to set that automatically.
+Examples of possibilities are:
+
+* integrating it into `/system/etc/install-recovery.sh` if that file exists
+  (works on some devices – but not on all, even if the file exists)
+* integrate it into an init script if your device and kernel support it
+  (those devices usually have a `/system/etc/init.d` directory); also see:
+  [How can I run a script on boot?](http://android.stackexchange.com/q/6558/16575)
+  and [How to run a script on boot](http://android.stackexchange.com/a/115595/16575)
+  (the latter is about how to add `init.d` support to your device if it's not there)
+* run a script at boot time by other means, e.g. utilizing [Script
+  Manager](https://play.google.com/store/apps/details?id=os.tools.scriptmanager)
+  or [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)
+
+
 [1]: http://android.izzysoft.de/downloads "IzzyOnDroid: Android Downloads"
