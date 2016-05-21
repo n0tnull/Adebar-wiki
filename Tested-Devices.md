@@ -1,6 +1,6 @@
 ## Tested devices
 This list is obviously incomplete, as not everyone using *Adebar* gives feedback.
-If you're using *Adebar* without issues, please contribute to this list. You
+If you're using *Adebar* successfully with your device, please contribute to this list. You
 can add your devices e.g. in [issue #7](https://github.com/IzzySoft/Adebar/issues/7),
 where you might also find additional details on the one or other device listed
 below from its original report.
@@ -21,6 +21,7 @@ Motorola Milestone 2    |       4.4.x | 2015-11 | CyanogenMod (Izzy)
 Oneplus (A0001)         |       5.1.1 | 2015-11 | Cyanogenmod (inktrap)
 Samsung Galaxy Ace 2    |       4.1.2 | 2015-10 | stock, not rooted (Izzy)
 Sony Xperia Z Ultra (togari) |  5.1.1 | 2015-12 | Cyanogenmod 12.1 (20151204) (chaotix)
+Wileyfox Swift          |       5.1.1 | 2016-05 | CyanogenOS 12.1 (Izzy)
 
 
 ### Tablets
