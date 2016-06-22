@@ -90,7 +90,9 @@ not have use for all of them, and thus wish to „skip“ some parts. You can do
 or disabling the corresponding feature. These settings are „booleans“, so `0` means „off“
 and `1` stands for „on”. By default, all features are enabled (i.e. set to `1`).
 
-* `MK_APPDISABLE`: the script to „freeze/disable“ apps
+* `MK_APPDISABLE`: create a script to „freeze/disable“ apps
+* `MK_APPENABLE`:  create a script to enable ALL apps. Useful in case you once
+  disable one too much and have no GUI anymore on your device :)
 * `MK_USERBACKUP`/`MK_SYSBACKUP`: create the script to backup user apps+data /
   system app-data
 * `MK_APPRESTORE_DELAY`: on restore, ADB sometimes simply „aborts“ when a second
