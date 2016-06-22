@@ -218,6 +218,9 @@ details. Apps are grouped by installers in [[userApps.md|example userApps.md]].
   in compatibility mode, some "secured config files" are not simply "pulled"
   (which would remain their timestamps), but "cat" – as that can be done via
   `adb shell` using the `su -c` command.
+* `ROOT_PMDISABLE`: Have the `disable` script run the `pm disable` commands
+  as root. If they don't show any effect without, this should do the trick
+  (provided the device is rooted, of course).
 * `AUTO_CONFIRM`: Whether backups should be automatically confirmed via
   keypresses send with ADB. When using this, don't touch your device while
   the „automated process“ is running: it requires the backup/restore screen
