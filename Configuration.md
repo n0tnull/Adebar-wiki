@@ -222,7 +222,8 @@ details. Apps are grouped by installers in [[userApps.md|example userApps.md]].
   `adb shell` using the `su -c` command.
 * `ROOT_PMDISABLE`: Have the `disable` script run the `pm disable` commands
   as root. If they don't show any effect without, this should do the trick
-  (provided the device is rooted, of course).
+  (provided the device is rooted, of course). Same for the `enable` script
+  and its `pm enable` commands.
 * `AUTO_CONFIRM`: Whether backups should be automatically confirmed via
   keypresses send with ADB. When using this, don't touch your device while
   the „automated process“ is running: it requires the backup/restore screen
