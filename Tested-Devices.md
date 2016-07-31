@@ -23,6 +23,7 @@ Oneplus (A0001)         |       5.1.1 | 2015-11 | Cyanogenmod (inktrap)
 Samsung Galaxy Ace 2    |       4.1.2 | 2015-10 | stock, not rooted (Izzy)
 Sony Xperia Z Ultra (togari) |  5.1.1 | 2015-12 | Cyanogenmod 12.1 (20151204) (chaotix)
 Wileyfox Swift          |       5.1.1 | 2016-05 | CyanogenOS 12.1 (Izzy)
+Samsung Galaxy S7 Edge  |       6.0.1 | 2016-07 | Adebar > 1.6.0 needed (Izzy)
 
 
 ### Tablets
