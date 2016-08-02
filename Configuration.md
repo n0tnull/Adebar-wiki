@@ -45,6 +45,13 @@ A short information for each setting is contained in the example config file, wh
 * `CACHEDIR`: In the cache directory, Adebar stores data between runs –
   so it does not have to re-evaluate them. This includes e.g. names of apps
   in the `appnames` sub-directory. Leave it empty (default) to disable caching.
+* `APPCACHESPLUS`: additional directories where *Adebar* should look for information
+  on app names. By default, this is empty. An example line fitting for all devices
+  could look like:  
+  `APPCACHESPLUS="sysApps sysApps/Android sysApps/Google"`  
+  Of course, this only makes sense if you also have the corresponding "cache files".
+  See the [Adebar-Appcache](https://github.com/IzzySoft/Adebar-Appcache) project
+  for details – and get your initial filling from there :)
 * `TRANSFER_DIR`: base dir for transfers (install, push files, etc.). Completely
   ignored if not set in your config (default), if the directory pointed to does
   not exist, and skipped for the subdirs not existing as well. *Adebar* checks
