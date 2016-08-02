@@ -78,8 +78,8 @@ backing up your partitions block-wise, i.e. create partition images. Consider
 this rather experimental: This script is a side-product of the partition info
 in the device documentation. Such images can get rather big, and running the
 script as-is might result in unnecessary "duplicates" (to give you an example:
-If might backup `/dev/block/mmcblk1`, which basically is the entire „drive“,
-and additionally all its partitions separately: `/dev//dev/block/mmcblk1p*`).
+It might backup `/dev/block/mmcblk1`, which basically is the entire „drive“,
+and additionally all its partitions separately: `/dev/block/mmcblk1p*`).
 This is because there's no unified way of retrieving partition details. Other
 than with „normal Linux systems“, Android installations don't come with
 `/etc/fstab` by default (though you might find such with your custom ROM or
