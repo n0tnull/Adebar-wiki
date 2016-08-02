@@ -78,8 +78,8 @@ backing up your partitions block-wise, i.e. create partition images. Consider
 this rather experimental: This script is a side-product of the partition info
 in the device documentation. Such images can get rather big, and running the
 script as-is might result in unnecessary "duplicates" (to give you an example:
-If might backup `/dev/block/mmcblk1`, which basically is the entire „drive“,
-and additionally all its partitions separately: `/dev//dev/block/mmcblk1p*`).
+It might backup `/dev/block/mmcblk1`, which basically is the entire „drive“,
+and additionally all its partitions separately: `/dev/block/mmcblk1p*`).
 This is because there's no unified way of retrieving partition details. Other
 than with „normal Linux systems“, Android installations don't come with
 `/etc/fstab` by default (though you might find such with your custom ROM or
@@ -98,3 +98,19 @@ running in „normal operation mode“). Make sure you know what you are doing
 Which is why I won't give instructions on how to restore those images. If you're
 knowing what you're doing, you also know how to do it. I take no responsibility
 for any results (but if they're positive, I'm open to donations).
+
+## Device documentation: Names of system apps
+Depending on the vendor and ROM of your device, it ships with several (hundreds)
+apps pre-installed: there's the stock Android system, and the Cyanogen "stock"
+(CyanogenOS / CyanogenMod). Vendors like LG or Motorola add some of their specific
+apps – and vendors like Samsung tend to bloat your device with tons of their own
+apps as well as that of others (on a *Galaxy S7 Edge,* I've counted almost 5 times
+the amount of pre-installed apps found on e.g. the *LG P880:* far more than 200).
+
+In order to not just see their package names in your system apps listings (many of
+those apps are not found on *Google Play,* so you'd have to do some research or
+make pretty good guesses), you can pre-fill *Adebar's* app-name-cache: Find the
+necessary "cache files" in the [Adebar-Appcache](https://github.com/IzzySoft/Adebar-Appcache)
+project (clone it or [download it as ZIP
+file](https://github.com/IzzySoft/Adebar-Appcache/archive/master.zip)). Be welcome
+to contribute to it – the selection of devices I have is limited :)
