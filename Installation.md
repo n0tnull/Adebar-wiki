@@ -18,3 +18,5 @@ The `master` branch here at Github should always reflect the latest "stable" cod
 
 ## Installation
 Just unpack the contents of the downloaded `.zip`/`.tar.gz` file into an empty directory of your chosing, no special installation required. If you cloned the repo, you can run `adebar-cli` directly from within your clone, and also create your `config/` and `cache/` directories there (these are contained in the `.gitignore` file, and thus should cause no conflicts).
+
+**Note:** when cloning the repo on Windows (native) for use in Cygwin, take care to set `autocrlf = false` before cloning, or the resulting files are unusable ([see here](https://github.com/IzzySoft/Adebar/issues/7#issuecomment-245275208) for details).
