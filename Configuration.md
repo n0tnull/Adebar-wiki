@@ -68,6 +68,15 @@ A short information for each setting is contained in the example config file, wh
       `${TRANSFER_DIR}/upload/sdcard/Books/example.epub`. If the transfer
       succeeded, the entire tree (starting with `sdcard`) will be removed; on
       failure it will remain.
+    * `special`: special transfers that go beyond simply uploading some files.
+      You control the process via an executable file named `run` placed inside
+      this directory, which should exit with a return code of 0 on success and
+      a non-zero return code on failure. This way you can also rename files on
+      the device – useful e.g. if you want to push a new `lacells.db` for the
+      [Local-GSM-Backend project by n76](https://github.com/n76/Local-GSM-Backend),
+      where you first need to push a huge file and, when the upload is completed,
+      need to rename it so the app can grab it.  
+      An example `run` file can be found as `doc/run.sample`.
 
 ### Device specifics
 * `DEVICE_NAME`: A name you can recognize your device by. This is used
@@ -243,6 +252,10 @@ details. Apps are grouped by installers in [[userApps.md|example userApps.md]].
   c) definitely doesn't work if a password/pattern/pin protection is active.
   Hence by default this is turned off. Feel free to play with it: in the
   worst case, it simply doesn't work.
+* `BASH_LOCATION`: By default, *Adebar* tries to auto-detect the location
+  of the `bash` binary using `#!/usr/bin/env bash`. You can override that
+  to a preferred fixed location using this variable, e.g.
+  `BASH_LOCATION="/bin/bash"` if needed – except for `adebar-cli` itself.
 
 
 ## User-defined Functions
