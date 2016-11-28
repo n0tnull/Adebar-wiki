@@ -1,6 +1,9 @@
 ## Requirements
 * **ADB** installed (and configured for your device) on your computer. This can either be the [complete Android SDK](https://developer.android.com/sdk/index.html "Android SDK at Android Developers"), or a [minimal installation of ADB](http://android.stackexchange.com/q/42474/16575 "Android.SE: Is there a minimal installation of ADB?").
-* **Bash** (version 4 or higher). As this is a very common shell environment, it's available by default on most Linux distributions. If you're a Windows user: sorry, the only windows I have are for light and fresh air.
+* **Bash** (version 4 or higher). As this is a very common shell environment, it's available by default on most Linux distributions.
+    * on Linux, this should ship per default
+    * on Windows, you can use [Cygwin](https://www.cygwin.com/) (confirmed); [MobaXterm](http://mobaxterm.mobatek.net/) should do as well (no reports yet; includes Cygwin and is easier to install, even offers a portable version)
+    * MacOS ships with an ancient version of Bash (3.5). You can use [Macports](https://www.macports.org/) to install a newer version. This doesn't overwrite the current version, just installs the newer version in a different location. Once it's installed, Adebar will use it by default, thanks to d5ve's contribution.
 * **Android 4.0+**: As the `adb backup` and `adb restore` commands have not been present before Android 4.0, *Adebar* will not be of much use with devices running older versions – except for, maybe, creating a „device documentation“.
 
 I have not tested *Adebar* with Android versions before 4.0. It might work, though, for [[device documentation|example deviceInfo.md]] and [[list of installed apps|example userApps.md]], and maybe even some more. Though it might as well create the backup and restore scripts, those will be of no use – as `adb backup` and `adb restore` have only be added with Android 4.0.
