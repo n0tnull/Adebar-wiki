@@ -17,14 +17,16 @@ LG Optimus 4X HD (P880) |       4.1.2 | 2015-10 | stock ROM (Izzy)
 LG Optimus 4X HD (P880) |       4.4.4 | 2015-12 | CyanogenMod 11 (Izzy)
 LG Optimus 4X HD (P880) |       5.1.1 | 2016-07 | CyanogenMod 12.1 (Izzy)
 Moto G 2nd gen          |       5.1.x | 2016-09 | Stock, not rooted; Cygwin (Jason)
+Moto G4                 |       6.0.1 | 2017-01 | Stock; Cygwin (JimboJoe)
 Motorola Milestone 2    |       4.2.x |         | CyanogenMod (Izzy)
 Motorola Milestone 2    |       4.3.x | 2015-10 | CyanogenMod 10.2 (Izzy)
 Motorola Milestone 2    |       4.4.x | 2015-11 | CyanogenMod 11 (Izzy)
 Oneplus (A0001)         |       5.1.1 | 2015-11 | Cyanogenmod (inktrap)
 Samsung Galaxy Ace 2    |       4.1.2 | 2015-10 | stock, not rooted (Izzy)
+Samsung Galaxy S7 Edge  |       6.0.1 | 2016-07 | Adebar > 1.6.0 needed (Izzy)
 Sony Xperia Z Ultra (togari) |  5.1.1 | 2015-12 | Cyanogenmod 12.1 (20151204) (chaotix)
 Wileyfox Swift          |       5.1.1 | 2016-05 | CyanogenOS 12.1 (Izzy)
-Samsung Galaxy S7 Edge  |       6.0.1 | 2016-07 | Adebar > 1.6.0 needed (Izzy)
+Xiaomi Mi4C             |       6.0.1 | 2017-01 | OmniROM 6.0.1; Cygwin (JimboJoe)
 
 
 ### Tablets
