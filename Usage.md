@@ -45,6 +45,7 @@ There are two exceptions to the above mentioned syntax:
 * 3: Multiple devices found, but no SERIAL specified in config
 * 4: SERIAL specified, but no matching device connected
 * 5: target directory doesn't exist, and neither can be created
+* 6: Bash is not present or its version is lower than 4
 
 
 ## How to use the generated scripts
